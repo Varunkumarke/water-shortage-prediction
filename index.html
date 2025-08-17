@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Shortage Risk Prediction</title>
+    <link rel="stylesheet" type=text/css href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div class="ring">
+        <i style="--clr:#00ff0a;"></i>
+        <i style="--clr:#ff0057;"></i>
+        <i style="--clr:#fffd44;"></i>
+        <div class="login">
+            <h1>Water Shortage Risk Prediction</h1>
+            <form action="/predict" method="post">
+                <div class="inputBx">
+                    <label for="rainfall_pattern">Rainfall Pattern:</label>
+                    <input type="number" name="rainfall_pattern" min="1" required><br>
+                </div>
+                <div class="inputBx">
+                    <label for="population_growth">Population Growth (%):</label>
+                    <input type="number" name="population_growth" min="1" required><br>
+                </div>
+                <div class="inputBx">
+                    <label for="water_consumption">Water Consumption Habits (liters/person/day):</label>
+                    <input type="number" name="water_consumption" min="1"  required><br>
+                </div>
+                <div class="inputBx">
+                    <label for="year">year:</label>
+                    <input type="number" name="year" min="2024"  required><br>
+                </div>
+                <div class="inputBx">
+                    <button type="submit">Predict</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
